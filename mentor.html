@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Registration Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+            color: #5ee7df;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 16px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #333;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        textarea:focus {
+            border-color: #5ee7df;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #b490ca;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #9d7fb5;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .note {
+            font-size: 14px;
+            color: #777;
+        }
+        .form-header {
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="form-header">Mentor Registration Form</h2>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="organization">College/Organization Name:</label>
+            <input type="text" id="organization" name="organization" required>
+        </div>
+
+        <div class="form-group">
+            <label for="town">Town/City:</label>
+            <input type="text" id="town" name="town" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" required>
+        </div>
+
+        <div class="form-group">
+            <label for="expertise">Professional Expertise:</label>
+            <textarea id="expertise" name="expertise" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="courses">Special Courses Completed:</label>
+            <textarea id="courses" name="courses" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="mentoring-area">Desired Area of Mentoring:</label>
+            <textarea id="mentoring-area" name="mentoring-area" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="availability">Time Availability (hours per week):</label>
+            <input type="number" id="availability" name="availability" required min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Work Experience:</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="e.g., Previous companies, roles, years of experience"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="remuneration">Expected Remuneration (INR):</label>
+            <input type="number" id="remuneration" name="remuneration">
+        </div>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+</body>
+</html>
